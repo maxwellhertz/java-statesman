@@ -148,7 +148,7 @@ public class StateMachine<Model, State> {
         if (beforeCallbacks.containsKey(statePair)) {
             beforeCallbacks.get(statePair).accept(model);
         }
-        stateTransitionRepo.create(model, currentState, target);
+        stateTransitionRepo.create(model, target);
         if (afterCallbacks.containsKey(statePair)) {
             afterCallbacks.get(statePair).accept(model);
         }

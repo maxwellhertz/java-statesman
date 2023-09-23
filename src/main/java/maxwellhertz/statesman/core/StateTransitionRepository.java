@@ -19,9 +19,8 @@ public interface StateTransitionRepository<Model, State> {
      * Record a state transition.
      *
      * @param model the data model
-     * @param from the initial state
-     * @param to the target state
+     * @param state the current state
      * @throws IllegalArgumentException none of these arguments can be null
      */
-    void create(final Model model, final State from, final State to) throws IllegalArgumentException;
+    void create(final Model model, final State state) throws IllegalArgumentException;
 }
